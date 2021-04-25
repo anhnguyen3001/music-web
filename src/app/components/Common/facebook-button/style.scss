@@ -1,0 +1,15 @@
+@import 'styles/variables.scss';
+
+.my-facebook-button-class {
+    border-radius: rem(30px);
+    padding: rem(10px) rem(30px);
+    outline: none !important;
+    border: none !important;
+    font-weight: bold;
+    background: $color-red !important;
+    color: #fff !important;
+
+    i {
+        margin-right: rem(20px);
+    }
+}

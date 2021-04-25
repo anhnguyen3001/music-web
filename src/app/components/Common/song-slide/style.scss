@@ -1,0 +1,31 @@
+@import 'styles/variables.scss';
+
+.song-slide {
+    &--bg {
+        background-color: #f4f4f4;
+    }
+
+    &__swiper {
+        &-prev {
+            margin-right: rem(6px);
+        }
+
+        &-prev,
+        &-next {
+            padding: rem(5px);
+            cursor: pointer;
+        }
+
+        &-button--disabled {
+            opacity: 0.6;
+            cursor: default;
+        }
+    }
+
+    &__post {
+        width: rem(200px);
+        list-style: none;
+        border-radius: rem(5px);
+        margin-right: rem(20px);
+    }
+}

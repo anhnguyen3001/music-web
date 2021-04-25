@@ -1,0 +1,60 @@
+$f4: 32px;
+$f5: 24px;
+$f6: 20px;
+$f8: 16px;
+$f9: 14px;
+$f11: 10px;
+$f15: 18px;
+
+// FONT-WEIGHT
+$fw-normal: 400;
+$fw-medium: 500;
+$fw-semiBold: 600;
+$fw-bold: 700;
+
+$color-red: #DC3A61;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-brown: #666666;
+$color-gray: #999999;
+$color-line: #E4E4E4;
+$color-line-dark: #353535;
+$color-bg: #EEEEEE;
+$color-gray-bg: #F3F3F3;
+$color-light-gray-bg: #F4F4F4;
+$color-gray2: #807878;
+$color-bg-dark: #232323;
+
+$base-size: 16px;
+
+@function rem($size, $context: $base-size) {
+    @return $size / $base-size * 1rem;
+}
+
+// Responsive
+$breakpoints: (
+    xs: 576px,
+    sm: 768px,
+    md: 992px,
+    lg: 1200px
+);
+
+@mixin respond-below($breakpoint){
+    @if map-has-key($breakpoints, $breakpoint){
+
+        $breakpoint-value: map-get($breakpoints, $breakpoint);
+
+        @media (max-width: $breakpoint-value){
+            @content;
+        }
+    }
+}
+
+@mixin hideText($lines) {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+    word-wrap: break-word;
+}

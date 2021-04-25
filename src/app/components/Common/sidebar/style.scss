@@ -1,0 +1,78 @@
+@import 'styles/variables.scss';
+
+.sidebar {
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    display: none;
+    position: fixed;
+    background-color: $color-white;
+    transform: translateX(-100%);
+    transition: 1s transform cubic-bezier(0.23, 1, 0.32, 1), 1s -webkit-transform cubic-bezier(0.23, 1, 0.32, 1);
+    z-index: 1000;
+    padding: rem(30px) rem(20px);
+
+    @include respond-below(md) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &.show {
+        @include respond-below(sm) {
+            transform: translateX(0);
+            box-shadow: rem(10px) 0 rem(30px) 0 rgba(0, 0, 0, 0.1);
+        }
+    }
+
+    .app-logo {
+        text-align: center;
+        padding-bottom: rem(30px);
+        margin: 0 rem(-20px);
+        border-bottom: 1px solid $color-line;
+    }
+
+    &-item {
+        font-size: rem($f6);
+        line-height: rem(20px);
+        font-weight: $fw-semiBold;
+        text-decoration: none !important;
+        color: $color-black !important;
+        padding: rem(25px) 0;
+
+        &--active, &:hover {
+            color: $color-red !important;
+        }
+
+        &:first {
+            margin-top: rem(30px);
+        }
+    }
+    
+    .signin {
+        border-top: 1px solid $color-line;
+        margin: 0 rem(-20px);
+        padding-left: rem(20px);
+        padding-right: rem(20px);
+        cursor: pointer;
+    }
+
+    .user {
+        border-top: 1px solid $color-line;
+        margin: 0 rem(-20px);
+        padding: rem(20px) rem(20px) 0;
+
+        &-avatar {
+            width: rem(50px);
+            height: rem(50px);
+            border-radius: 50%;
+            margin-right: rem(10px);
+        }
+
+        &-name {
+            font-size: rem($f8);
+            font-weight: $fw-medium;   
+            color: $color-black;
+        }
+    }
+}

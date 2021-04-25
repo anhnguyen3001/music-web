@@ -1,0 +1,54 @@
+@import 'styles/variables.scss';
+
+.search-container {
+    padding-top: rem(40px);
+    padding-bottom: rem(40px);
+
+    .tab-all {
+        margin-top: rem(-40px);
+    }
+
+    .search-left-tab {
+        background-color: #f4f4f4;
+        border-radius: rem(5px);
+        padding: rem(10px);
+    }
+
+    .search-nav-badge {
+        padding: rem(8px);
+        height: fit-content;
+        background-color: $color-white;
+        border-radius: 50%;
+    }
+
+    .search-nav-link {
+        font-weight: $fw-medium;
+        font-size: rem($f8);
+        line-height: rem(20px);
+        color: $color-black;
+        
+        &.active {
+            color: $color-red;
+        }
+    }
+
+    .tab-pane {
+        height: 100%;
+    }
+
+    .search-tab-content {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .search-list {
+        flex: 1;
+    }
+
+    .tab-content {
+        @include respond-below(xs) {
+            padding-top: rem(40px);
+        }
+    }
+}

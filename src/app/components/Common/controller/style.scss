@@ -1,0 +1,86 @@
+@import "styles/variables.scss";
+
+.controller {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: $color-black;
+    box-shadow: 0 rem(-5px) rem(10px) rgba($color-black, 0.3);
+    color: $color-white;
+    padding: 0 rem(85px);
+    height: rem(90px);
+
+    @include respond-below(md) {
+        padding-left: rem(60px);
+        padding-right: rem(60px);
+    }
+
+    @include respond-below(sm) {
+        height: rem(120px);
+        padding-left: rem(40px);
+        padding-right: rem(40px);
+    }
+
+    @include respond-below(xs) {
+        padding-left: rem(20px);
+        padding-right: rem(20px);
+    }
+    p {
+        margin-bottom: 0;
+    }
+
+    &__info {
+        &-img {
+            width: rem(50px);
+            height: rem(50px);
+        }
+
+        &-title {
+            font-size: rem($f15) !important;
+            margin-bottom: 0;
+            display: -webkit-box;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            word-wrap:break-word;
+        }
+
+        &-artist {
+            a {
+                color: $color-gray !important;
+            }
+            
+        }
+    }
+
+    &__timer {
+        font-size: rem($f9);
+        color: $color-gray;
+        &-left {
+            padding-right: rem(20px);
+        }
+
+        &-right {
+            padding-left: rem(20px);
+        }
+    }
+
+    &__icon {
+        width: 100%;
+    }
+
+    &__control {
+        &-small {
+            width: rem(20px);
+            height: rem(20px);
+        }
+
+        &-big {
+            width: rem(55px);
+            height: rem(55px);
+        }
+    }
+}

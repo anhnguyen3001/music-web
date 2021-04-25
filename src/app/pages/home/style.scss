@@ -1,0 +1,25 @@
+@import 'styles/variables.scss';
+
+.homepage-container {
+    .bg-slide {
+        background-color: #f4f4f4;
+    }
+
+    .view-all-txt {
+        text-align: 'center';
+        margin-top: rem(12px);
+        height: rem(32px);
+
+        .view-all-btn {
+            font-weight: $fw-medium;
+            font-size: rem($f8);
+            color: $color-red;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+
+    .swiper-wrapper {
+        margin-bottom: 0;
+    }
+}

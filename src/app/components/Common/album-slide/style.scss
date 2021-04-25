@@ -1,0 +1,55 @@
+@import 'styles/variables.scss';
+
+.album-slide {
+    &--bg {
+        background-color: #f4f4f4;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: rem(16px);
+        padding-right: rem(60px);
+
+        &-left {
+            display: flex;
+            align-items: flex-end;
+
+            span {
+                color: $color-red;
+                font-weight: $fw-medium;
+                font-size: $f8;
+                line-height: rem(20px);
+            }
+        }
+    }
+
+    &__swiper {
+        &-prev {
+            margin-right: rem(6px);
+        }
+
+        &-prev,
+        &-next {
+            padding: rem(5px);
+            cursor: pointer;
+        }
+
+        &-button--disabled {
+            opacity: 0.6;
+        }
+    }
+
+    &__content {
+        .swiper-wrapper {
+            padding-inline-start: 0;
+        }
+    }
+    
+    &__playlist {
+        width: rem(220px);
+        border-radius: rem(5px);
+        margin-right: rem(20px);
+    }
+}

@@ -1,0 +1,49 @@
+@import 'styles/variables.scss';
+
+.singer-detail-container {
+    min-height: 100%;
+    padding-bottom: rem(40px);
+    
+    .singer {
+        &-info {
+            position: relative;
+            background: linear-gradient(74.09deg, #895ED3 0%, rgba(190, 110, 171, 0.567708) 33.89%, #F17E84 100.2%);
+            height: rem(280px);
+            padding-bottom: rem(20px);
+        }
+
+        &-control {
+            margin-left: rem(282px);
+
+            @include respond-below(sm) {
+                margin-left: rem(202px);
+            }
+        }
+
+        &-avatar {
+            position: absolute;
+            bottom: -20%;
+            width: rem(250px);
+            height: rem(250px);
+            border-radius: 50%;
+            box-shadow: 0 4px 5px 0 rgba(0,0,0,0.2);
+
+            @include respond-below(sm) {
+                bottom: -10%;
+                width: rem(180px);
+                height: rem(180px);
+            }
+        }
+
+        &-name {
+            font-weight: $fw-bold;
+            font-size: rem($f4);
+            letter-spacing: rem(2px);
+            color: $color-white;
+        }
+
+        &-detail-section {
+            margin-top: rem(60px);
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@import 'styles/variables.scss';
+
+.search-pagination {
+    margin-top: rem(20px);
+    justify-content: center;
+
+    .page-link {
+        border-color: $color-line;
+        color: $color-black !important;
+        font-weight: $fw-medium;
+        font-size: rem($f8);
+        padding: rem(12px) rem(20px);
+        
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    .page-item.active {
+        .page-link {
+            border-color: $color-red;
+            background-color: $color-red;
+            border-color: initial;
+            color: $color-white !important;
+        }
+    }
+}

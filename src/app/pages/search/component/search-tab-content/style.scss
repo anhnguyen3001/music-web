@@ -1,0 +1,30 @@
+@import 'styles/variables.scss';
+
+.genre-container {
+    padding-bottom: rem(40px);
+
+    .genre {
+        &-song {
+            margin-bottom: rem(80px);
+        }
+    }
+
+    .album {
+        &-image {
+            width: 100%;
+            border-radius: 50%;
+            box-shadow: 0 4px 5px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+
+            &:hover {
+                box-shadow: 0 8px 8px 0 rgba(0,0,0,0.2);
+            }
+
+            @include respond-below(sm) {
+                display: block;
+                width: 50%;
+                margin: rem(60px) auto;
+            }
+        }
+    }
+}

@@ -1,0 +1,197 @@
+@import "styles/variables.scss";
+
+.chart {
+    &-container {
+        text-align: center;
+        padding: rem(80px) rem(85px) rem(30px);
+        background-color: $color-black;
+        color: $color-white;
+
+        @include respond-below(md) {
+            padding: rem(60px);
+        }
+
+        @include respond-below(sm) {
+            padding: rem(40px);
+        }
+
+        @include respond-below(xs) {
+            padding: rem(20px);
+        }
+    
+        .brand {
+            font-weight: $fw-bold;
+            font-size: rem($f9);
+            line-height: rem(20px);
+            margin-bottom: rem(12px);
+            text-transform: uppercase;
+            letter-spacing: rem(3px);
+            color: $color-red;
+        }
+    
+        .title {
+            font-size: rem($f5);
+            line-height: rem(32px);
+            margin-bottom: rem(20px);
+            font-weight: $fw-semiBold;
+        }
+    }
+
+    &-swiper {
+        margin-left: rem(-20px);
+    }
+
+    &-slide {
+        width: (100%/3) !important;
+        
+        // 0 rem(10px) rem(6px) rem(5px) rgba(153, 153, 153, 0.15);
+        border-radius: rem(15px);
+        padding: 0 rem(20px);
+
+        @include respond-below (md) {
+            width: (100%/2) !important;
+        }
+
+        @include respond-below (xs) {
+            width: 100% !important;
+        }
+    }
+
+    &-block {
+        background-color: $color-bg-dark;
+        // box-shadow: 
+        //     0 2.8px 2.2px rgba(153, 153, 153, 0.034),
+        //     0 6.7px 5.3px rgba(153, 153, 153, 0.048),
+        //     0 12.5px 10px rgba(153, 153, 153, 0.06),
+        //     0 22.3px 17.9px rgba(153, 153, 153, 0.072),
+        //     0 41.8px 33.4px rgba(153, 153, 153, 0.086),
+        //     0 100px 80px rgba(153, 153, 153, 0.12);
+    }
+
+    &-swiper-pagination {
+        margin: auto;
+        margin-top: (48rem/16);
+        position: relative;
+        display: none;
+
+        @include respond-below (md) {
+            display: block;
+        }
+
+        .swiper-pagination-bullet {
+            background: $color-white !important;
+            margin-right: rem(12px) !important;
+            width: rem(12px) !important;
+            height: rem(12px) !important;
+            border-radius: 100%;
+
+            &-active {
+                background: $color-red !important;
+            }
+        }
+    }
+
+    &-block {
+        background-color: $color-bg-dark;
+        // box-shadow: 
+        //     0 2.8px 2.2px rgba(153, 153, 153, 0.034),
+        //     0 6.7px 5.3px rgba(153, 153, 153, 0.048),
+        //     0 12.5px 10px rgba(153, 153, 153, 0.06),
+        //     0 22.3px 17.9px rgba(153, 153, 153, 0.072),
+        //     0 41.8px 33.4px rgba(153, 153, 153, 0.086),
+        //     0 100px 80px rgba(153, 153, 153, 0.12);
+        // 0 rem(10px) rem(6px) rem(5px) rgba(153, 153, 153, 0.15);
+        border-radius: rem(15px);
+        padding: rem(32px) rem(20px) rem(22px);
+    }
+    
+    &-title {
+        font-weight: $fw-medium;
+        font-size: rem($f15);
+        margin-bottom: rem(20px);
+        color: $color-white;
+    }
+
+    &-list {
+        background-color: transparent;
+        text-align: left;
+
+        li {
+            background-color: transparent;
+            border: none;
+            padding: rem(12px) 0;
+            cursor: pointer;
+            
+            &:not(:last-child) {
+                border-bottom: rem(1px) solid $color-line-dark;
+            }
+        }
+    }
+
+    &-song {
+        &-image {
+            position: relative;
+            padding: rem(3px);
+            border-radius: 50%;
+            background: $color-bg;
+            width: rem(46px);
+            height: rem(46px);
+            margin-right: rem(12px);
+
+            img {
+                width: rem(40px);
+                height: rem(40px);
+                border-radius: 50%;
+            }
+
+            .badge {
+                position: absolute;
+                font-size: rem($f11);
+                font-weight: $fw-bold;
+                line-height: rem(10px);
+                color: #fff;
+                width: rem(18px);
+                height: rem(18px);
+                top: rem(-2px);
+                right: rem(-2px);
+                border-radius: 50%;
+            }
+        }
+
+        &-name {
+            font-weight: $fw-medium;
+            font-size: rem($f8);
+            margin-bottom: rem(2px);
+        }
+
+        &-artist {
+            font-weight: $fw-medium;
+            font-size: rem($f9);
+            color: $color-gray;
+        }
+
+        &-option {
+            width: fit-content;
+            margin: 0 rem(-5px);
+
+            .react {
+                width: rem(20px);
+                height: rem(20px);
+                margin: 0 rem(5px);
+                cursor: pointer;
+            }
+    
+            .more {
+                width: rem(25px);
+                height: rem(5px);
+                margin: 0 rem(5px);
+                cursor: pointer;
+            }
+        }
+    }
+
+    &-button-container {
+        margin: rem(60px) auto 0;
+        width: rem(200px);
+    }
+}

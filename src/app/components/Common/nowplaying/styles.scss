@@ -1,0 +1,63 @@
+@import 'styles/variables.scss';
+
+.now-playing {
+    position: fixed;
+    bottom: rem(90px);
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background-color: $color-bg-dark;
+    overflow-y: scroll;
+    height: 0;
+    transition: 2s all cubic-bezier(0.23, 1, 0.32, 1), 2s -webkit-transform cubic-bezier(0.23, 1, 0.32, 1);
+    // opacity: 0;
+    pointer-events: none;
+
+    &.show {
+        height: 60%;
+        // opacity: 1;
+        pointer-events: visible;
+        padding-top: rem(32px);
+        padding-bottom: rem(20px);
+    }
+    
+    @include respond-below(sm) {
+        bottom: rem(120px);
+    }
+
+    &__title {
+        font-weight: $fw-medium;
+        font-size: rem($f15);
+        padding-bottom: rem(12px);
+        color: $color-white;
+    }
+
+    .lyric {
+        position: relative;
+        border-right: 1px solid $color-line-dark;
+
+        &-row {
+            color: $color-gray;
+            text-align: center;
+            font-size: rem($f6);
+            font-weight: $fw-medium;
+        }
+
+        &-not-found {
+            height: 100%;
+            padding-top: 15%;
+            text-align: center;
+
+            @include respond-below(xs) {
+                display: none;
+            }
+    
+            &-txt {
+                font-size: rem($f6);
+                font-weight: $fw-medium;
+                color: $color-gray;
+                margin-top: rem(12px);
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@import 'styles/variables.scss';
+
+.custom-btn {
+    border: none;
+    outline: none !important;
+    box-shadow: none !important;
+    font-weight: bold;
+    width: 100%;
+    padding: 0 rem(20px);
+
+    &--small {
+        padding-top: rem(10px);
+        padding-bottom: rem(10px);
+        line-height: rem(20px);
+        letter-spacing: rem(0.5px);
+        font-size: rem(12px);
+
+        &.custom-btn--shape-circle {
+            border-radius: rem(40px);
+        }
+    }
+
+    &--large {
+        padding-top: rem(12px);
+        padding-bottom: rem(12px);
+        letter-spacing: rem(1.5px);
+        font-size: rem(14px);
+
+        &.custom-btn--shape-circle {
+            border-radius: rem(60px);
+        }
+    }
+
+    &--color-red {
+        background: $color-red !important;
+        color: #fff !important;
+    }
+
+    &--color-black {
+        background: $color-black !important;
+        color: #fff !important;
+    }
+
+    &--shape-round {
+        border-radius: rem(5px);
+    }
+}

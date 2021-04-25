@@ -1,0 +1,8 @@
+@import 'styles/variables.scss';
+
+.loading-txt {
+    color: $color-brown;
+    font-weight: $fw-bold;
+    letter-spacing: rem(2px);
+    font-size: rem($f6);
+}

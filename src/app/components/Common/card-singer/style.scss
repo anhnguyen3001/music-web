@@ -1,0 +1,69 @@
+@import 'styles/variables.scss';
+
+.singer {
+    &-card {
+        box-shadow: 0 rem(3px) rem(4px) 0 rgba(0,0,0,0.2);
+        transition: 0.3s;
+        margin: rem(15px) 0;
+        border-radius: 10px;
+
+        &:hover {
+            box-shadow: rem(4px) rem(4px) rem(4px) 0 rgba(0,0,0,0.2);
+        }
+
+        .singer {
+            &-name {
+                @include hideText(1);
+                font-weight: $fw-medium;
+        
+                &[data-size='small'] {
+                    font-size: rem($f8);
+                    line-height: rem(22px);
+                }
+        
+                &[data-size='medium'] {
+                    font-size: rem($f6);
+                    line-height: rem(32px);
+                }
+            }
+        
+            &-info {
+                @include hideText(1);
+                color: $color-brown; 
+                font-size: rem(16px);
+                line-height: rem(20px);
+            }
+        }
+    }
+
+    &-card__cover{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &[data-size='small'] {
+            height: rem(150px);
+        }
+
+        &[data-size='medium'] {
+            height: rem(180px);
+        }
+    }
+
+    &-img {
+        height: 70%;
+        border-radius: 50%;
+    }
+
+    &-card__meta {
+        text-align: center;
+
+        &[data-size='small'] {
+            padding: rem(16px) rem(5px);
+        }
+
+        &[data-size='medium'] {
+            padding: rem(20px) rem(10px);
+        }
+    }
+}

@@ -1,0 +1,112 @@
+@import "styles/variables.scss";
+
+.banner {
+    padding-top: rem(80px);
+    padding-bottom: rem(150px);
+
+    @include respond-below(md) {
+        padding-top: rem(50px);
+    }
+
+    &-left {
+        padding-left: rem(85px);
+        padding-right: rem(40px);
+
+        @include respond-below(md) {
+            margin-bottom: rem(32px);
+            padding-left: rem(60px);
+            padding-right: rem(60px);
+        }
+
+        @include respond-below(sm) {
+            padding-left: rem(40px);
+            padding-right: rem(40px);
+        }
+    }
+
+    .discover-btn {
+        width: rem(180px);
+    }
+
+    .mlc-130px {
+        margin-left: rem(130px);
+    }
+
+    .txt-banner {
+        font-weight: $fw-bold;
+        font-size: rem(36px);
+        line-height: rem(60px);
+        margin-top: rem(45px);
+        margin-bottom: rem(40px);
+
+        @include respond-below(sm) {
+            line-height: rem(50px);
+            font-size: rem(30px);
+            margin-top: rem(20px);
+            margin-bottom: rem(20px);
+        }
+
+        .txt-special {
+            padding: 0 5px;
+            color: $color-white;
+            background: $color-red;
+            line-height: rem(50px);
+        }
+    }
+
+    .slide-block {
+        box-shadow: rem(-45px) rem(45px) $color-gray-bg;
+        position: relative;
+        left: rem(40px);
+
+        @include respond-below (md) {
+            left: rem(60px);
+        }
+
+        @include respond-below(sm) {
+            left: rem(40px);
+        }
+
+        .banner-slide {
+            width: rem(260px);
+        }
+
+        .img-slide {
+            display: inline-block;
+            padding-bottom: rem(5px);
+
+            img {
+                width: 100%;
+                object-fit: contain;
+                border-radius: 5px;
+            }
+        }
+
+        .swiper-pagination {
+            left: 45%;
+            margin-top: rem(10px);
+            margin-bottom: rem(45px);
+
+            .swiper-pagination-bullet {
+                background: $color-black !important;
+                margin-right: rem(4px) !important;
+                width: rem(5px) !important;
+                height: rem(5px) !important;
+                border-radius: 100%;
+            }
+
+            .swiper-pagination-bullet-active {
+                background: $color-red !important;
+                margin-right: rem(4px) !important;
+                width: rem(38px) !important;
+                height: rem(5px) !important;
+                border-radius: rem(2.5px) !important;
+            }
+        }
+    }
+
+    .txt-slide-container {
+        margin-top: rem(81px);
+        margin-bottom: rem(160px);
+    }
+}
